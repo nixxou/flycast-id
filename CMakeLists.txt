@@ -31,7 +31,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # One file, no redistributable beside it.
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
-# The submodule by default; relative to where cmake is run from otherwise.
+# The submodule by default. A relative path is taken from this folder (-DFLYCAST_SOURCE_DIR=../flycast: a checkout beside it).
 if (NOT DEFINED FLYCAST_SOURCE_DIR)
     set(FLYCAST_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/flycast")
 endif()
